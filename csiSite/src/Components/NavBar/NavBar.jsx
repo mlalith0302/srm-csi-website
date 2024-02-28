@@ -3,6 +3,8 @@ import { AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import { IoSunnyOutline } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa";
 
+import logo from "./csi_logo.png";
+
 import { Link } from 'react-scroll'
 
 const NavBar = ({mode, setMode, handleMode}) => {
@@ -16,7 +18,7 @@ const NavBar = ({mode, setMode, handleMode}) => {
   return (
    <div name='home' className={`flex flex-row items-center justify-between h-24 max-w-[1240px] mx-auto px-6 ${mode ? ' text-black bg-gray-300' : 'text-white bg-black'} `}>
      <h1 className=''>
-        <img src="./src/assets/csi_logo.png" alt="csi" height="45px" width="45px"/>
+        <img src={logo} alt="csi" height="45px" width="45px"/>
      </h1>
      <ul className={`flex-row gap-4 hidden md:flex ${mode ? '' : 'text-white bg-black'}`}>
      <Link  to="home"  smooth={true} duration={500} className='cursor-pointer' >Home </Link>
