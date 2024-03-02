@@ -3,7 +3,7 @@ import MainCard from './LeadCard';
 
 const Leads = ({ mode, handleLeads }) => {
   return (
-    <div name='leads' className={`border-2 m-4 flex flex-col justify-center items-center p-4  gap-4 ${mode ? 'bg-gray-300 text-black' : 'text-white bg-black'}`}>
+    <div name='leads' className={`border-2 m-4 flex flex-col justify-center items-center p-4  gap-4 ${mode ? 'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'}`}>
 
        <h1 className='font-semibold text-4xl cursor-pointer' onClick={handleLeads}>LEADS</h1> 
 

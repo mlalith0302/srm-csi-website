@@ -4,6 +4,7 @@ import Hero from './Components/HeroSection/Hero'
 import About from './Components/About/About';
 import Leads from './Components/Leads/Leads';
 import PastLeads from './Components/PrevLeads/PastLeads';
+import Faculty from './Components/Faculty/Faculty';
 
 function App() {
   
@@ -19,11 +20,15 @@ function App() {
   }
 
   return (
-    <div className={mode ? ' text-black bg-gray-300' : 'text-white bg-black'}>
-      <NavBar mode={mode} setMode={setMode} handleMode={handleMode}/>
+    <div className={mode ?'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'}>
+      <NavBar mode={mode} handleMode={handleMode}/>
       <Hero mode={mode}/>
       <About mode={mode}/>
-      {leads ? (<Leads mode={mode} handleLeads={handleLeads}/> ) : (<PastLeads mode={mode} handleLeads={handleLeads}/>)}
+      <div className='flex flex-col gap-8'>
+        <h1 className='text-4xl font-bold text-center mb-4'>Meet the Faculty</h1>
+        <Faculty mode={mode}/>
+      </div>
+      {/* {leads ? (<Leads mode={mode} handleLeads={handleLeads}/> ) : (<PastLeads mode={mode} handleLeads={handleLeads}/>)} */}
      
     </div>
   )
