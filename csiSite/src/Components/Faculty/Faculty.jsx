@@ -3,7 +3,7 @@ import logo from '../HeroSection/tempImg.jpg';
 
 const Faculty = ({ mode }) => {
   return (
-    <div className={`mt-2 mb-2 gap-4 w-full min-h-screen flex flex-col justify-around items-center ${mode ? 'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'}`}>
+    <div className={`m-4mt-2 mb-2 gap-4 w-full min-h-screen flex flex-col justify-around items-center ${mode ? 'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'}`}>
       <div className='flex flex-col justify-around shadow-lg w-full max-w-screen-lg md:flex-row'>
         <div className='p-2 md:w-1/2'>
           <img src={logo} alt="image" className='m-4 w-[400px] max-w-full' />

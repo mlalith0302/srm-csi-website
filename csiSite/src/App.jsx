@@ -24,7 +24,7 @@ function App() {
       <NavBar mode={mode} handleMode={handleMode}/>
       <Hero mode={mode}/>
       <About mode={mode}/>
-      <div className='flex flex-col gap-8'>
+      <div className='flex flex-col gap-8 m-4 '>
         <h1 className='text-4xl font-bold text-center mb-4'>Meet the Faculty</h1>
         <Faculty mode={mode}/>
       </div>
