@@ -20,7 +20,7 @@ function App() {
   }
 
   return (
-    <div className={mode ?'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'}>
+    <div className={` w-[100%] ${mode ?'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'}`}>
       <NavBar mode={mode} handleMode={handleMode}/>
       <Hero mode={mode}/>
       <About mode={mode}/>
