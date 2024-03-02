@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
+import logo from "../HeroSection/tempImg.jpg"
 import Text from './Text'
+
 const imgs = [
-
-  "src/Components/HeroSection/tempImg.jpg",
-  "src/Components/HeroSection/tempImg.jpg",
-  "src/Components/HeroSection/tempImg.jpg",
-  "src/Components/HeroSection/tempImg.jpg",
-  "src/Components/HeroSection/tempImg.jpg",
-  "src/Components/HeroSection/tempImg.jpg",
-  "src/Components/HeroSection/tempImg.jpg",
-
-  // Add more image paths as needed
+  { src: logo },
+  { src: logo },
+  { src: logo },
+  { src: logo },
+  { src: logo },
+  { src: logo },
 ];
+
 const imageTexts = [
     "CSI is Recruiting",
     "CSI WebMinds 2.0",
@@ -106,9 +105,9 @@ const Images = ({ imgIndex }) => {
               style={{
                 width: imageWidth,
                 height: imageHeight,
-                backgroundImage: `url(${imgSrc})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                backgroundImage: `url(${imgSrc.src})`,
               }}
               animate={{
                 scale: imgIndex === idx ? 0.95 : 0.85,

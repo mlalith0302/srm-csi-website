@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReactTyped } from "react-typed";
-import logo from "./csi_logo.png";
 import { SwipeCarousel } from './SwipeCarousel';
 const Hero = ({mode}) => {
   return (
