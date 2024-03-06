@@ -9,27 +9,7 @@ import Modal from '../Components/Modal/Modal';
 import Form from '../Components/Forms/Form';
 import Footer from '../Components/Footer/Footer';
 
-export default function Home() {
-	const [mode, setMode] = useState(true);
-	const [visible, setVisible] = useState(false);
-
-	const handleMode = () => {
-		setMode(!mode);
-	};
-
-	const [leads, setLeads] = useState(true);
-	const handleLeads = () => {
-		setLeads(!leads);
-	};
-
-	const handleModalClose = () => {
-		setVisible(false);
-	};
-
-	const handleModalOpen = () => {
-		setVisible(true);
-	};
-
+export default function Home({mode, handleMode}) {
 	return (
 		<div
 			className={`${
@@ -40,17 +20,8 @@ export default function Home() {
 		>
 			<NavBar
 				mode={mode}
-				handleModalOpen={handleModalOpen}
 				handleMode={handleMode}
 			/>
-			{visible && (
-				<Modal handleModalClose={handleModalClose}>
-					<Form
-						title='Register'
-						handleModalClose={handleModalClose}
-					/>
-				</Modal>
-			)}
 			<Hero mode={mode} />
 			<About mode={mode} />
 			<div className='flex flex-col gap-8 m-4 '>
@@ -61,7 +32,7 @@ export default function Home() {
 			</div>
 			<Footer />
 			<ScrollToTop smooth className='flex items-center justify-center' />
-			{/* {leads ? (<Leads mode={mode} handleLeads={handleLeads}/> ) : (<PastLeads mode={mode} handleLeads={handleLeads}/>)} */}
+			
 		</div>
 	);
 }
