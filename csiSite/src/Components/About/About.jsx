@@ -9,6 +9,7 @@ const About = ({ mode }) => {
 					: 'text-[#C9DBEE] bg-[#112A46]'
 			}`}
 			style={{ fontFamily: 'Roboto, sans-serif' }}
+			name='about'
 		>
 			<div
 				name=''

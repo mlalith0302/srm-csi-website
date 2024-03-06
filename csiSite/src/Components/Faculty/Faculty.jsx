@@ -15,7 +15,7 @@ const Faculty = ({ mode }) => {
 					<img
 						src={logo}
 						alt='image'
-						className='m-4 w-[400px] max-w-full'
+						className='m-4 w-[400px] max-w-full pr-8'
 					/>
 				</div>
 				<div className='max-w-[400px] p-2 md:w-1/2'>
@@ -31,7 +31,7 @@ const Faculty = ({ mode }) => {
 				</div>
 			</div>
 
-			<div className='flex flex-col justify-around shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg  w-full max-w-screen-lg md:flex-row'>
+			<div className='flex flex-col-reverse justify-around shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg  w-full max-w-screen-lg md:flex-row'>
 				<div className='max-w-[400px] p-2 md:w-1/2'>
 					<span className='text-4xl'>Lorem ipsum </span>
 					<p className='mt-4'>
@@ -46,7 +46,7 @@ const Faculty = ({ mode }) => {
 					<img
 						src={logo}
 						alt='image'
-						className='m-4 w-[400px] max-w-full'
+						className='m-4 w-[400px] max-w-full pr-8'
 					/>
 				</div>
 			</div>
@@ -56,7 +56,7 @@ const Faculty = ({ mode }) => {
 					<img
 						src={logo}
 						alt='image'
-						className='m-4 w-[400px] max-w-full'
+						className='m-4 w-[400px] max-w-full pr-8'
 					/>
 				</div>
 				<div className='max-w-[400px] p-2 md:w-1/2'>
