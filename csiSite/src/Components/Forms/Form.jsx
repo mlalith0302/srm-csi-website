@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Form({title}) {
 	return (
-		<div className={`rounded-3xl flex justify-between flex-col items-center w-full py-10 px-1 sm:px-5 my-10`}>
+		<div className={`rounded-3xl  flex justify-center flex-col items-center w-1/2 mx-auto py-10 px-1 sm:px-5 my-10`}>
 			<h1 className='font-bold text-3xl mb-5'>{title}</h1>
 			<form
 				action=''
@@ -162,7 +162,7 @@ export default function Form({title}) {
 					/>
 				</div> */}
 
-				<div className=' text-black flex justify-between items-center gap-4 self-end'>
+				<div className=' text-black flex justify-between items-center gap-4 '>
 					<button
 						type='button'
 						className='bg-white px-3 py-2 outline outline-2 outline-black rounded-xl '
