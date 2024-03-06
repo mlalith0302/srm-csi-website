@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Form(props) {
+export default function Form({title}) {
 	return (
-		<div className='bg-white text-black rounded-3xl flex justify-between flex-col items-center w-full py-10  px-1 sm:px-5 my-10 '>
-			<h1 className='font-bold text-3xl mb-5'>{props.title}</h1>
+		<div className={`rounded-3xl flex justify-between flex-col items-center w-full py-10 px-1 sm:px-5 my-10`}>
+			<h1 className='font-bold text-3xl mb-5'>{title}</h1>
 			<form
 				action=''
 				className='flex justify-between flex-col items-center gap-6 w-4/5 sm:w-3/4'
@@ -162,10 +162,9 @@ export default function Form(props) {
 					/>
 				</div> */}
 
-				<div className=' flex justify-between items-center gap-4 self-end'>
+				<div className=' text-black flex justify-between items-center gap-4 self-end'>
 					<button
 						type='button'
-						onClick={props.handleModalClose}
 						className='bg-white px-3 py-2 outline outline-2 outline-black rounded-xl '
 					>
 						Cancel
