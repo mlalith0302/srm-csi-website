@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Form({title}) {
 	return (
-		<div className={`rounded-3xl  flex justify-center flex-col items-center w-1/2 mx-auto py-10 px-1 sm:px-5 my-10`}>
+		<div className={`rounded-3xl  flex justify-center flex-col items-center w-full md:w-1/2 mx-auto py-10 px-1 sm:px-5 my-10`}>
 			<h1 className='font-bold text-3xl mb-5'>{title}</h1>
 			<form
 				action=''

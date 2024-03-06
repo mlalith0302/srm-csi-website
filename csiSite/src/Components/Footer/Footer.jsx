@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-export default function Footer() {
+export default function Footer({mode}) {
 	return (
-		<section className='bg-[#112A46] '>
+		<section >
 			<div className='max-w-screen-xl px-4 py-4 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8'>
 
 				<div className='flex justify-center mt-8 space-x-6'>

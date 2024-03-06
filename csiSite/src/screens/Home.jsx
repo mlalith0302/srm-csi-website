@@ -30,7 +30,7 @@ export default function Home({mode, handleMode}) {
 				</h1>
 				<Faculty mode={mode} />
 			</div>
-			<Footer />
+			<Footer mode={mode}/>
 			<ScrollToTop smooth className='flex items-center justify-center' />
 			
 		</div>
