@@ -13,7 +13,7 @@ const NavBar = ({ mode, handleMode }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) { // Adjust this value as needed
+            if (window.scrollY > 70) { // Adjust this value as needed
                 setIsNavFixed(true);
             } else {
                 setIsNavFixed(false);
