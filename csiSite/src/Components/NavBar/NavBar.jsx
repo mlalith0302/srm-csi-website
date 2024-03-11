@@ -8,19 +8,24 @@ import logo from './csi_logo.png';
 
 const NavBar = ({ mode, handleMode }) => {
     const [nav, setNav] = useState(false);
-    const [leadsDropdown, setLeadsDropdown] = useState(false); 
+    const [leadsDropdown, setLeadsDropdown] = useState(false);
+    const [isNavFixed, setIsNavFixed] = useState(false);
 
     useEffect(() => {
-        if (nav) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+        const handleScroll = () => {
+            if (window.scrollY > 100) { // Adjust this value as needed
+                setIsNavFixed(true);
+            } else {
+                setIsNavFixed(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
-            document.body.style.overflow = 'auto';
+            window.removeEventListener('scroll', handleScroll);
         };
-    }, [nav]);
+    }, []);
 
     const handleNav = () => {
         setNav(prevNav => !prevNav);
@@ -32,10 +37,11 @@ const NavBar = ({ mode, handleMode }) => {
 
     return (
         <div
-            name='home'
-            className={`flex flex-row items-center justify-between h-24 max-w-[1240px] mx-auto px-6 ${
-                mode ? 'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'
-            } `}
+            className={` flex flex-row items-center justify-between h-24  mx-auto px-6 ${
+                isNavFixed ? 'shadow-lg fixed top-0  w-full z-50 flex justify-center' : ''
+            } ${
+                mode ?  'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'
+            }`}
         >
             <h1 className=''>
                 <Link to='/'>
@@ -43,7 +49,7 @@ const NavBar = ({ mode, handleMode }) => {
                 </Link>
             </h1>
             <ul
-                className={`flex-row font-bold text-lg items-center gap-4 hidden md:flex ${
+                className={` flex-row font-bold text-lg items-center gap-4 hidden md:flex ${
                     mode ? 'bg-[#D9EBFF] text-[#0F232A]' : 'text-[#C9DBEE] bg-[#112A46]'
                 }`}
             >
@@ -95,7 +101,7 @@ const NavBar = ({ mode, handleMode }) => {
                     Contact{' '}
                 </ScrollLink>
 
-                <button className='bg-blue-900 text-white outline outline-black outline-2 px-3 py-2 rounded-2xl'>
+                <button className=''>
                     <Link to='/register'>Register</Link>
                 </button>
                 <li onClick={handleMode} className='cursor-pointer p-0.5 z-50'>
@@ -179,7 +185,7 @@ const NavBar = ({ mode, handleMode }) => {
                         onClick={() => {
                             setNav(false);
                         }}
-                        className='bg-blue-900 text-white outline outline-black outline-2 px-3 py-2 rounded-2xl'
+                        className=''
                     >
                         <Link to='/register'>Register</Link>
                     </button>
