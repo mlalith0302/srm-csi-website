@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBar'
 import NoEvents from './NoEvents'
 const Registration = ({mode, handleMode}) => {
 
-  const [events, setEvents] = useState(true);
+  const [events, setEvents] = useState(false);
   return (
     <div className={mode
       ? 'bg-[#D9EBFF] text-[#0F232A]'

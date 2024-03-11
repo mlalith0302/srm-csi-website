@@ -30,7 +30,12 @@ export default function Home({mode, handleMode}) {
 				</h1>
 				<Faculty mode={mode} />
 			</div>
-			<Footer mode={mode}/>
+			<div className={mode
+      ? 'bg-[#112A46] text-[#0F232A]'
+      : 'text-[#C9DBEE] bg-[#D9EBFF]'}>
+		<Footer mode={mode}/>
+	  </div>
+			
 			<ScrollToTop smooth className='flex items-center justify-center' />
 			
 		</div>
