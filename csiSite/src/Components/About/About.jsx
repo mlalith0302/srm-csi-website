@@ -1,6 +1,11 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 const About = ({ mode }) => {
+
+	const [showCSI, setCSI] = useState(false);
+	const [showCSE, setCSE] = useState(false);
+	const [showSRM, setSRM] = useState(false);
 	return (
 		<section
 			className={`flex flex-col m-4 justify-center gap-4 items-center p-4 ${
@@ -24,8 +29,10 @@ const About = ({ mode }) => {
 						Computer Society of India is a body of computer
 						professionals in India. It was started on 6 March 1965
 						by a few computer professionals and has now grown to be
-						the national body representing computer professionals.
-						It has 72 chapters across India, 511 student branches,
+						the national body representing computer professionals. 
+						<p className={`text-center p-2 font-medium text-lg hover:cursor-pointer flex gap-2 justify-center items-center  ${showCSI ? 'hidden' : ''}  transition ease-in-out duration-300 `} onClick={()=>setCSI(check => !check)}>Load More <span><MdKeyboardDoubleArrowDown /></span></p>
+						<span className={`${showCSI ? '' : 'hidden'} transition ease-in-out duration-300`}>
+						 It has 72 chapters across India, 511 student branches,
 						and 100,000 members. The Computer Society of India is a
 						non-profit professional meet to exchange views and
 						information to learn and share ideas. The society also
@@ -45,6 +52,8 @@ const About = ({ mode }) => {
 						educators, and students to share their knowledge,
 						experiences, and ideas through conferences, seminars,
 						and workshops.
+						</span>
+						<p className={`text-center p-2 font-medium text-lg hover:cursor-pointer flex gap-2 justify-center items-center ${showCSI ? '' : 'hidden'}`} onClick={()=>setCSI(check => !check)}>Load Less <span><MdOutlineKeyboardDoubleArrowUp /></span></p>
 					</p>
 				</div>
 				<div className='m-4 px-4 md:x-8 py-6 rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] '>
@@ -56,7 +65,10 @@ const About = ({ mode }) => {
 						outstanding research environment complemented by
 						excellence in teaching. They provide a lot of
 						opportunities for their students, like they organize
-						many workshops, webinars, etc. The training imparted
+						many workshops, webinars, etc.
+						<p className={`text-center p-2 font-medium text-lg hover:cursor-pointer flex gap-2 justify-center items-center ${showCSE ? 'hidden' : ''}`} onClick={()=>setCSE(check => !check)}>Load More <span><MdKeyboardDoubleArrowDown /></span></p>
+						<span className={`${showCSE ? '' : 'hidden'}`}>
+						 The training imparted
 						aims to prepare young minds for the challenging
 						opportunities in the IT industry. The teachers in SRM
 						provide practical knowledge that makes the students
@@ -64,6 +76,8 @@ const About = ({ mode }) => {
 						also manages to welcome many big companies for the
 						students so that they get placed in a good company and
 						their future is secured.
+						</span>
+						<p className={`text-center p-2 font-medium text-lg hover:cursor-pointer flex gap-2 justify-center items-center ${showCSE ? '' : 'hidden'}`} onClick={()=>setCSE(check => !check)}>Load Less <span><MdOutlineKeyboardDoubleArrowUp /></span></p>
 					</p>
 				</div>
 				<div className='m-4 px-4 md:x-8 py-6 rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] '>
@@ -74,6 +88,8 @@ const About = ({ mode }) => {
 						students, over 200 faculties, and a plethora of visiting
 						faculty from across industries. It is a private
 						university located in Ghaziabad, Uttar Pradesh, India.
+						<p className={`text-center p-2 font-medium text-lg hover:cursor-pointer flex gap-2 justify-center items-center ${showSRM ? 'hidden' : ''}`} onClick={()=>setSRM(check => !check)}>Load More <span><MdKeyboardDoubleArrowDown /></span></p>
+						<span className={`${showSRM ? '' : 'hidden'}`}>
 						The university offers undergraduate, postgraduate, and
 						doctoral programs in various fields such as engineering,
 						management, computer applications, pharmacy, and
@@ -93,6 +109,8 @@ const About = ({ mode }) => {
 						Science and Technology, Ghaziabad campus is a reputed
 						institution known for its quality education and
 						excellent infrastructure.
+						</span>
+						<p className={`text-center p-2 font-medium text-lg hover:cursor-pointer flex gap-2 justify-center items-center ${showSRM ? '' : 'hidden'}`} onClick={()=>setSRM(check => !check)}>Load Less <span><MdOutlineKeyboardDoubleArrowUp /></span></p>
 					</p>
 				</div>
 			</div>
