@@ -1,20 +1,35 @@
-import React, {useState} from 'react';
-import Home from "./screens/Home"
+import React, { useState } from 'react';
+import Home from './screens/Home';
 import Registration from './Components/Forms/Registration';
-import { Route, Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
+import Contact from './Components/Contact/Contact';
 
 function App() {
 	const [mode, setMode] = useState(true);
-
 
 	const handleMode = () => {
 		setMode(!mode);
 	};
 	return (
 		<Routes>
-			<Route path='/' element={<Home mode={mode} setMode={setMode} handleMode={handleMode}/>}/>
-			<Route path='/register' element={<Registration mode={mode} handleMode={handleMode}/>}/>
-			
+			<Route
+				path='/'
+				element={
+					<Home
+						mode={mode}
+						setMode={setMode}
+						handleMode={handleMode}
+					/>
+				}
+			/>
+			<Route
+				path='/register'
+				element={<Registration mode={mode} handleMode={handleMode} />}
+			/>
+			<Route
+				path='/contact'
+				element={<Contact mode={mode} handleMode={handleMode} />}
+			/>
 		</Routes>
 	);
 }
